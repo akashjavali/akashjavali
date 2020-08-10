@@ -1,0 +1,64 @@
+/*-----------------------------------------------------------------------------------
+
+ Project Name: New Project
+ Project URI: http://
+ Description: 
+ Author: 
+ Author URI: 
+ Version: 1.0.0
+
+-----------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------------------
+
+ == Table Of Content
+
+ 00 Imports
+ 01 Basics
+ 
+---------------------------------------------------------------- */
+
+/* 00. Imports */
+@import 'variables', 'mixins', '_utility', '_sanitize', '_custom';
+
+/* 01. Basics */
+
+/* Start Basics  */
+* {
+    box-sizing: border-box;
+    outline: none;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: black;
+    font-family: $fr;
+    font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $fb;
+}
+
+p,
+a,
+span,
+a:hover {
+    font-family: $fr;
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Start Basics ends */
