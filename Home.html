@@ -14,7 +14,7 @@
     <meta name="author" content="" />
 
     <!-- Title  -->
-    <title>New Project</title>
+    <title>Akash Javali</title>
 
     <!-- Favicon -->
     <!-- <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" /> -->
@@ -27,34 +27,194 @@
     <link rel="stylesheet" href="lib/animate.min.css" />
     <link rel="stylesheet" href="lib/Font-Awesome-4.7.0/css/font-awesome.min.css" />
 
+    <!-- Headline -->
+    <link rel="stylesheet" href="lib/Headline/headline.css" />
+
+    <!-- Revel js -->
+    <!-- <link rel="stylesheet" href="lib/Revel/dist/reset.css"> -->
+    <link rel="stylesheet" type="text/css" href="lib/Revel/dist/reveal.css">
+    <!-- <link rel="stylesheet" href="lib/Revel/dist/theme/black.css" id="theme"> -->
+
+    <!-- Theme used for syntax highlighted code -->
+    <!-- <link rel="stylesheet" href="lib/Revel/plugin/highlight/monokai.css" id="highlight-theme"> -->
+
+    <!-- Theme -->
+    <link id="theme" type="text/css" rel="stylesheet" href="light-theme.css" />
+    <!-- Theme ends -->
+
+
+
     <!-- Core Style Css -->
-    <link rel="stylesheet" href="assets/css/main.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.min.css" />
+
+
+
+
+
 </head>
 
 <body>
-    <header>
 
-        <!-- Nav starts -->
+    <!-- Loader -->
+    <div class="se-pre-con"></div>
 
-        <!-- Nav ends -->
+    <button class="theme-switch" id="theme-toggle">
+        <svg height="512pt" viewBox="-32 0 511 512" width="512pt" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="m394.3125 256c0 94.257812-76.410156 170.667969-170.667969 170.667969-94.253906 0-170.664062-76.410157-170.664062-170.667969s76.410156-170.667969 170.664062-170.667969c94.257813 0 170.667969 76.410157 170.667969 170.667969zm0 0"
+                fill="#ffd54f" />
+            <g fill="#ffc107">
+                <path
+                    d="m223.644531 69.332031c-8.832031 0-16-7.167969-16-16v-37.332031c0-8.832031 7.167969-16 16-16s16 7.167969 16 16v37.332031c0 8.832031-7.167969 16-16 16zm0 0" />
+                <path
+                    d="m48.113281 170.667969c-2.410156 0-4.882812-.535157-7.1875-1.730469l-31.617187-16c-7.894532-3.988281-11.050782-13.609375-7.0625-21.503906 4.011718-7.847656 13.65625-11.09375 21.507812-7.039063l31.613282 16c7.894531 3.988281 11.050781 13.609375 7.0625 21.503907-2.835938 5.566406-8.46875 8.769531-14.316407 8.769531zm0 0" />
+                <path
+                    d="m16.519531 389.332031c-5.84375 0-11.476562-3.199219-14.292969-8.765625-3.988281-7.894531-.832031-17.515625 7.0625-21.503906l31.613282-16c7.894531-4.054688 17.515625-.832031 21.503906 7.039062 3.992188 7.894532.832031 17.515626-7.058594 21.503907l-31.617187 16c-2.304688 1.195312-4.777344 1.726562-7.210938 1.726562zm0 0" />
+                <path
+                    d="m223.644531 512c-8.832031 0-16-7.167969-16-16v-37.332031c0-8.832031 7.167969-16 16-16s16 7.167969 16 16v37.332031c0 8.832031-7.167969 16-16 16zm0 0" />
+                <path
+                    d="m430.769531 389.332031c-2.429687 0-4.882812-.53125-7.210937-1.726562l-31.613282-16c-7.894531-3.988281-11.050781-13.609375-7.0625-21.503907 4.011719-7.871093 13.632813-11.09375 21.503907-7.039062l31.617187 16c7.890625 3.988281 11.050782 13.609375 7.058594 21.503906-2.816406 5.566406-8.445312 8.765625-14.292969 8.765625zm0 0" />
+                <path
+                    d="m399.175781 170.667969c-5.84375 0-11.476562-3.203125-14.292969-8.769531-3.988281-7.894532-.832031-17.515626 7.0625-21.503907l31.613282-16c7.894531-4.054687 17.515625-.832031 21.503906 7.039063 3.992188 7.894531.832031 17.515625-7.058594 21.503906l-31.617187 16c-2.324219 1.195312-4.800781 1.730469-7.210938 1.730469zm0 0" />
+            </g>
+        </svg></button>
 
-    </header>
 
-    <!-- Main starts -->
 
-    <main>
-        <section class="">
-            <div class="container">
+    <!-- Nav starts -->
+
+    <nav class="navbar navbar-expand-md fixed-top nav_bar">
+        <div class="container">
+            <a class="navbar-brand nav_bar__logo" href="Home.html#/">
+                <img src="assets/images/logo.png" alt="logo">
+
+            </a>
+            <button class="navbar-toggler nav_bar__toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse nav_bar__collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto ">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="Home.html#/">Home</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html#/1">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html#/2">Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Home.html#/1/1">Connect</a>
+                    </li>
+
+                </ul>
             </div>
-        </section>
-    </main>
+        </div>
+    </nav>
 
-    <!-- Main ends -->
+    <!-- Nav ends -->
+
+
+    <div class="reveal" id="particles-js">
+        <div class="slides">
+            <section>
+                <section>
+                    <div class="container">
+                        <div class="home">
+                            <div class="home__hero">
+                                <h2>Welcome, my name is Akash</h2>
+                                <h1 class="cd-headline loading-bar">
+                                    <span>I Am </span>
+                                    <span class="cd-words-wrapper">
+                                        <b class="is-visible">Freelancer</b>
+                                        <b class="is-hidden">Developer</b>
+                                    </span>
+                                </h1>
+
+                                <p>Stay in trend with our constantly updating while A single place to share, curate
+                                    and discover visual that tells a story.</p>
+
+                                <a class="btn_theme btn_fill" href="Home.html#/1"><span>About Me</span></a>
+
+
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <div class="about">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <img src="assets/images/About.png" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <h2>About me</h2>
+                                <p>Follow your own passion—not your parents’, not your teachers’—followed my passion to
+                                    be a 'Full Stack Web Developer' leaving my education qualifications behind which was
+                                    my parent's
+                                    choice. As I am following my passion you can expect me to give my best in any kind
+                                    of job</p>
+                                <p> I'm a Indian based full-stack web developer creating awesome and responsive
+                                    apps and website for companies of all sizes around the globe. Let's start
+                                    scrolling and
+                                    learn more
+                                    about me.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </section>
+                <section>
+                    <h1>Contact Me</h1>
+                </section>
+
+            </section>
+            <section>
+                <h1>Works</h1>
+            </section>
+        </div>
+    </div>
+
 
     <!-- Footer starts -->
 
-    <footer class="">
+    <footer class="footer">
         <div class="container">
+            <div class="social_icons">
+                <ul class="list-inline list-unstyled">
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/akash-javali-57879375/"><i
+                                class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://github.com/akashjavali"><i class="fa fa-github"
+                                aria-hidden="true"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/akash.javali/"><i
+                                class="fa fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.instagram.com/akashjavali/"><i
+                                class="fa fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://twitter.com/akashjavali"><i class="fa fa-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="https://www.youtube.com/channel/UC69Rvp1L5JM6E5mgMfJ-rRA/"><i
+                                class="fa fa-youtube"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </footer>
 
@@ -69,12 +229,45 @@
     <script src="lib/Bootstrap 4/popper.min.js"></script>
 
     <!-- Plugins -->
-    <script src="lib/Bootstrap 4/bootstrap.min.js"></script>
+    <script src="lib/Bootstrap 4//bootstrap.min.js"></script>
 
     <script src="lib/Swiper JS/swiper.min.js"></script>
 
     <script src="lib/Owl Carousel/owl.carousel.min.js"></script>
 
+    <!-- Revel Js -->
+
+    <script src="lib/Revel/dist/reveal.js"></script>
+    <script src="lib/Revel/plugin/notes/notes.js"></script>
+    <script src="lib/Revel/plugin/markdown/markdown.js"></script>
+    <script src="lib/Revel/plugin/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+
+            //custom add by me
+            width: "100%",
+            height: "100%",
+            margin: 0,
+            minScale: 1,
+            maxScale: 1,
+            // transition: 'slide',
+            // backgroundTransition: 'slide',
+            // transitionSpeed: 'slow',
+
+            // Learn about plugins: https://revealjs.com/plugins/
+            plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+        });
+    </script>
+
+    <script src="lib/particles.min.js"></script>
+
+    <!-- Headline js -->
+    <script src="lib/Headline/headline.js"></script>
+    <!-- <script src="lib/Headline/headline.js"></script> -->
 
     <!-- custom scripts -->
     <script src="assets/js/main.js"></script>

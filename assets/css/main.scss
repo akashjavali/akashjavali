@@ -15,11 +15,14 @@
 
  00 Imports
  01 Basics
+ 02 Important Classes
+ 03 Common Classes
+ 04 Section styles
  
 ---------------------------------------------------------------- */
 
 /* 00. Imports */
-@import 'variables', 'mixins', '_utility', '_sanitize', '_custom';
+@import 'variables', 'mixins', '_utility', '_sanitize', '_lib', '_dark';
 
 /* 01. Basics */
 
@@ -33,18 +36,37 @@
 }
 
 body {
-    color: black;
     font-family: $fr;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: $fb;
+h1 {
+    color: $pc;
+    font-size: 3em;
+    font-family: $fm;
+    @include max(991px) {
+        font-size: 30px;
+    }
+    @include max(575px) {
+        font-size: 25px;
+    }
+}
+
+h2 {
+    font-size: 2em;
+    font-family: $fl;
+    @include max(991px) {
+        font-size: 25px;
+    }
+    @include max(575px) {
+        font-size: 20px;
+    }
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
 }
 
 p,
@@ -60,5 +82,239 @@ img {
     width: 100%;
     height: auto;
 }
+button {
+    background: transparent;
+    &:focus {
+        outline: none;
+    }
+}
 
 /* Start Basics ends */
+
+/* Important Classes start */
+
+#particles-js {
+    canvas {
+        position: relative;
+    }
+}
+
+/* Loader Styles */
+
+.no-js #loader {
+    display: none;
+}
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(../images/loader.gif) center no-repeat #fff;
+}
+
+.theme-switch {
+    border: none;
+    padding: 10px;
+    position: fixed;
+    right: 0;
+    cursor: pointer;
+    z-index: 1031;
+    svg {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls {
+    color: $pc;
+}
+
+/*********************************************
+   * PROGRESS BAR
+   *********************************************/
+.reveal .progress {
+    background: rgba(0, 0, 0, 0.2);
+    color: $pc;
+}
+
+/* Important Classes ends */
+
+/* Common Classes start */
+
+.btn_theme {
+    display: inline-block;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 30px;
+    position: relative;
+    transition: all 0.4s;
+    overflow: hidden;
+    outline: none;
+    margin: 10px;
+    font-size: 16px;
+    font-family: $fm;
+    background: transparent;
+
+    &:hover {
+        color: white;
+    }
+    &::before {
+        background: #fff;
+        content: '';
+        height: 100%;
+        left: 0;
+        opacity: 0.4;
+        position: absolute;
+        top: 0;
+        transition: width 0.4s;
+        width: 0;
+        z-index: 1;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn_fill {
+    background: $pc;
+    border-color: $pc;
+    color: white;
+}
+
+/* Common Classes ends */
+
+/* Section styles start */
+
+//navbar
+
+.nav_bar {
+    @include max(767px) {
+        background: inherit;
+    }
+    &__logo {
+        img {
+            // width: 150px;
+        }
+    }
+    &__toggler {
+        @include max(767px) {
+            margin-right: 10%;
+        }
+        span {
+            color: $pc;
+        }
+    }
+    &__collapse {
+        ul {
+            li {
+                padding: 15px;
+                @include max(767px) {
+                    text-align: center;
+                }
+                a {
+                    padding: 10px 0;
+                    position: relative;
+                    display: inline-block;
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 0;
+                        left: 0;
+                        bottom: -2px;
+                        height: 2px;
+                        background: $pc;
+                        transition: width 0.3s;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+                    }
+                }
+            }
+            .active {
+                a {
+                    color: $pc;
+                    font-weight: bold;
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        bottom: 0;
+                        height: 2px;
+                        background: $pc;
+                        transition: width 0.3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//home
+
+.home {
+    text-align: center;
+    &__hero {
+        p {
+            width: 60%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+    }
+}
+
+//footer
+
+.footer {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    @include max(375px) {
+        left: 40%;
+        transform: translateX(-30%);
+    }
+
+    .social_icons {
+        ul {
+            text-align: center;
+            margin-bottom: 0;
+
+            li {
+                display: inline-block;
+                margin: 7px;
+
+                a {
+                    color: $pc;
+                    vertical-align: middle;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    height: 35px;
+                    width: 35px;
+                    line-height: 35px;
+                    border-radius: 50%;
+                    // background: #ffffff;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+
+/* Section styles ends */
