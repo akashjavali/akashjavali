@@ -58,7 +58,7 @@ h1 {
 
 h2 {
     font-size: 32px;
-    font-family: $fl;
+    font-family: $fm;
     @include max(991px) {
         font-size: 25px;
     }
@@ -269,6 +269,8 @@ button {
     }
 }
 
+.main_heading {
+}
 /* Common Classes ends */
 
 /* Section styles start */
@@ -368,7 +370,6 @@ button {
 
     h2 {
         position: relative;
-        font-weight: 600;
         padding-bottom: 15px;
         line-height: 140%;
         &::before {
@@ -395,11 +396,18 @@ button {
             bottom: 0;
         }
     }
-    p {
-        padding-top: 30px;
+    &__content {
         background: url('../../assets/images/quotes.png') no-repeat scroll 10px
             2px transparent;
+        padding-top: 30px;
+        p {
+            margin-bottom: 10px;
+            a {
+                font-family: $fm;
+            }
+        }
     }
+
     &__btn_group {
         @include max(767px) {
             text-align: center;
@@ -410,6 +418,100 @@ button {
         img {
             @include max(767px) {
                 display: none;
+            }
+        }
+    }
+}
+
+//contact
+
+.contact {
+    &__head {
+        h2 {
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            &::before {
+                content: '';
+                height: 1px;
+                background: rgba(0, 0, 0, 0.2);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                width: 200px;
+            }
+            &::after {
+                content: '';
+                display: block;
+                width: 70px;
+                height: 2px;
+                background: $pc;
+                margin: 0 auto;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+        }
+        p {
+            width: 80%;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+    }
+
+    .contact_info {
+        padding-left: 5%;
+        text-align: left;
+        .contact_content {
+            margin-bottom: 20px;
+            h6 {
+                color: $pc;
+                font-family: $fb;
+            }
+            address {
+                line-height: 1.5;
+            }
+        }
+    }
+    .contact_form {
+        .input_wrap {
+            input {
+                margin-bottom: 20px;
+                border: none;
+                border-bottom: 1px solid;
+                border-radius: 0;
+                padding: 8px 5px;
+                padding-top: 10px;
+                padding-bottom: 2px;
+                background: transparent;
+                height: 37px;
+                color: $pc;
+
+                &:focus {
+                    border-bottom: 1px solid $layp5;
+                    box-shadow: none;
+                }
+            }
+
+            input:focus ~ .floating-label,
+            input:not(:focus):valid ~ .floating-label {
+                top: -5px;
+                bottom: 10px;
+                left: 15px;
+                font-size: 11px;
+                opacity: 1;
+            }
+
+            .floating-label {
+                position: absolute;
+                pointer-events: none;
+                left: 20px;
+                top: 8px;
+                transition: 0.2s ease all;
             }
         }
     }
