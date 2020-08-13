@@ -163,10 +163,9 @@ button {
 
 /* Dark Mode Settings */
 @media (prefers-color-scheme: dark) {
-    /* all your styles for dark mode here */
     body {
-        background: #000;
-        color: #fff;
+        // background: #000;
+        // color: #fff;
     }
 }
 
@@ -440,7 +439,7 @@ button {
                 }
 
                 a {
-                    color: $pc;
+                    // color: $pc;
                     vertical-align: middle;
                     text-align: center;
                     text-decoration: none;
@@ -451,6 +450,9 @@ button {
                     border-radius: 50%;
                     // background: #ffffff;
                     font-size: 18px;
+                    &:hover {
+                        color: $pc;
+                    }
                 }
             }
         }
