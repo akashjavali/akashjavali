@@ -22,7 +22,7 @@
 ---------------------------------------------------------------- */
 
 /* 00. Imports */
-@import 'variables', 'mixins', '_utility', '_lib';
+@import 'variables', 'mixins', '_utility', '_lib', '_test';
 
 /* 01. Basics */
 
@@ -43,38 +43,41 @@ body {
 
 h1 {
     color: $pc;
-    font-size: 3em;
+    font-size: 48px;
     font-family: $fm;
     @include max(991px) {
-        font-size: 30px;
+        font-size: 38px;
     }
     @include max(575px) {
-        font-size: 25px;
+        font-size: 28px;
     }
     @include max(375px) {
-        font-size: 20px;
+        font-size: 24px;
     }
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 32px;
     font-family: $fl;
     @include max(991px) {
         font-size: 25px;
     }
     @include max(575px) {
-        font-size: 20px;
+        font-size: 22px;
     }
     @include max(375px) {
-        font-size: 18px;
+        font-size: 20px;
     }
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.5;
+    @include max(991px) {
+        font-size: 18px;
+    }
     @include max(767px) {
-        font-size: 14px;
+        font-size: 16px;
     }
 }
 
@@ -245,18 +248,24 @@ button {
     background: $pc;
     border-color: $pc;
     color: white;
+    &:hover {
+        color: black;
+    }
 }
 
 .btn_outline {
     border-color: $pc;
-    ::after {
+    &::after {
         background: $pc;
     }
-    ::before {
+    &::before {
         background: $pc;
     }
     span {
         color: $pc;
+        &:hover {
+            color: white;
+        }
     }
 }
 
@@ -307,23 +316,23 @@ button {
                     }
                 }
             }
-            .active {
-                a {
-                    color: $pc;
-                    font-weight: bold;
-                    &:after {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        width: 100%;
-                        left: 0;
-                        bottom: 0;
-                        height: 2px;
-                        background: $pc;
-                        transition: width 0.3s;
-                    }
-                }
-            }
+            // .active {
+            //     a {
+            //         color: $pc;
+            //         font-weight: bold;
+            //         &:after {
+            //             content: '';
+            //             display: block;
+            //             position: absolute;
+            //             width: 100%;
+            //             left: 0;
+            //             bottom: 0;
+            //             height: 2px;
+            //             background: $pc;
+            //             transition: width 0.3s;
+            //         }
+            //     }
+            // }
         }
     }
 }
@@ -449,7 +458,7 @@ button {
                     line-height: 35px;
                     border-radius: 50%;
                     // background: #ffffff;
-                    font-size: 18px;
+                    font-size: 20px;
                     &:hover {
                         color: $pc;
                     }
