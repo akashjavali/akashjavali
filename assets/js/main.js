@@ -1,46 +1,90 @@
-// Wait for window load
-
+// PRELOADER
 $(window).on('load', function () {
     setTimeout(function () {
-        $('.se-pre-con').hide()
+        $('body').addClass('page-loaded');
     }, 1000);
 });
 
 //Nav configs
 
 $(document).ready(function () {
+    // new WOW().init();
 
-  function setActive() {
-      setTimeout(function () {
-          var hash = window.location.hash.substr(1);
+    
+        // HAMBURGER MENU
+        $('.hamburger').on('click', function(e) {
+            if ($(".navigation-menu").hasClass("active")) {
+                $(".hamburger").toggleClass("open");
+                $("body").toggleClass("overflow");
+                $(".navigation-menu").removeClass("active");
+                $(".navigation-menu .inner .menu").css("transition-delay", "0s");
+                $(".navigation-menu .inner blockquote").css("transition-delay", "0s");
+                $(".navigation-menu .bg-layers span").css("transition-delay", "0.3s");
+            } else
+            {
+                $(".navigation-menu").addClass('active');
+                $(".hamburger").toggleClass("open");
+                $("body").toggleClass("overflow");
+                $(".navigation-menu.active .inner .menu").css("transition-delay", "0.45s");
+                $(".navigation-menu.active .inner blockquote").css("transition-delay", "0.50s");
+                $(".navigation-menu .bg-layers span").css("transition-delay", "0s");
+            }
+            $(this).toggleClass("active");
+        });
 
-          if (hash) {
-            $('a[href*="#"]').parent().removeClass('active');
-            $('a[href="#' + hash + '"]').parent().addClass('active');
-          }
-      }, 15);
-  }
 
-  setActive(); // On Page Load
-  $(window).trigger('hashchange');
+    // Navbar close on clicking the links   
+    $('nav a').click(function () {
+        $('.nav_bar__collapse ').removeClass('show');
+    })
 
-  $('a[href*="#"]').click(function () { // On link click
-      setActive();
-  });
+    //Add Nav active class
 
+    function setActive() {
+        setTimeout(function () {
+            var hash = window.location.hash.substr(1);
+
+            if (hash) {
+                $('a[href*="#"]').parent().removeClass('active');
+                $('a[href="#' + hash + '"]')
+                    .parent()
+                    .addClass('active');
+            }
+        }, 15);
+    }
+
+    // On Page Load
+
+    // setActive(); 
+    // $(window).trigger('hashchange');
+
+    // On link click
+
+    // $('a[href*="#"]').click(function () {
+    //     setActive();
+    // });
+
+    // TYPEWRITER
+    var data = {
+        pre_loader_typewriter: ['Please wait', 'Still loading', 'Almost done'],
+    };
+
+    $('#typewriter').typewriter({
+        prefix: '',
+        text: data.pre_loader_typewriter,
+        typeDelay: 100,
+        waitingTime: 1500,
+        blinkSpeed: 800,
+    });
 });
 
-
-
-
-
-//Theme Config
+//Theme mode Config
 
 // this one is jut to wait for the page to load
 document.addEventListener('DOMContentLoaded', () => {
     const themeStylesheet = document.getElementById('theme');
     const storedTheme = localStorage.getItem('theme');
-    const imgChange = document.getElementById('imgChange')
+    const imgChange = document.getElementById('imgChange');
     if (storedTheme) {
         themeStylesheet.href = storedTheme;
     }
@@ -49,11 +93,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // if it's light -> go dark
         if (themeStylesheet.href.includes('light')) {
             themeStylesheet.href = 'dark-theme.css';
-            imgChange.src="assets/images/moon.svg"
+            imgChange.src = 'assets/images/moon.svg';
         } else {
             // if it's dark -> go light
             themeStylesheet.href = 'light-theme.css';
-            imgChange.src="assets/images/sunlight.svg"
+            imgChange.src = 'assets/images/sunlight.svg';
         }
         // save the preference to localStorage
         localStorage.setItem('theme', themeStylesheet.href);
@@ -74,17 +118,11 @@ if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark');
 }
 
-$(document).ready(function () {
-    // new WOW().init();
-});
-
-
-
 /* Partical Js */
 
 // particlesJS(
 //     'particles-js',
-  
+
 //     {
 //       particles: {
 //         number: {
@@ -196,4 +234,3 @@ $(document).ready(function () {
 //       retina_detect: true,
 //     }
 //   );
-  

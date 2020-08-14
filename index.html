@@ -14,10 +14,11 @@
     <meta name="author" content="" />
 
     <!-- Title  -->
-    <title>Portfolio - Akash Javali</title>
+    <title>Akash Javali - Portfolio</title>
 
     <!-- Favicon -->
-    <!-- <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon" /> -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
 
     <!-- Plugins -->
     <link rel="stylesheet" href="lib/Bootstrap 4/bootstrap.min.css" />
@@ -55,8 +56,27 @@
 
 <body>
 
-    <!-- Loader -->
-    <div class="se-pre-con"></div>
+    <!-- preloader -->
+
+    <div class="preloader" style="background: #000000 !important;">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="inner">
+            <figure class="fadeInUp animated"> <img src="assets/images/preloader.gif" alt="loader"> </figure>
+            <span class="typewriter" id="typewriter"><span id="typewriter-prefix"></span><span
+                    id="typewriter-text"></span><span id="typewriter-suffix" style="opacity: 0.566561;">█</span></span>
+        </div>
+    </div>
+
+    <div class="transition-overlay">
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+        <div class="layer"></div>
+    </div>
+
 
     <button class="theme-switch" id="theme-toggle">
         <img id="imgChange" src="assets/images/sunlight.svg" alt="">
@@ -75,7 +95,8 @@
             <button class="navbar-toggler nav_bar__toggler" type="button" data-toggle="collapse"
                 data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="fa fa-bars"></span>
+                <!-- <span class="fa fa-bars"></span> -->
+                <div class="hamburger" id="hamburger-menu"> <span></span> <span></span> <span></span> </div>
             </button>
             <div class="collapse navbar-collapse nav_bar__collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto ">
@@ -140,8 +161,23 @@
                                 <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7 align-self-center">
                                     <h2>About me</h2>
                                     <div class="about__content">
-                                        <p> &#8220;Follow your own passion—not your parents’, not your teachers’
-                                            &#8221;— As
+                                        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+                                        <!DOCTYPE svg
+                                            PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+                                        <svg width="100%" height="100%" viewBox="0 0 161 135" version="1.1"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+                                            xmlns:serif="http://www.serif.com/"
+                                            style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                                            <g transform="matrix(0.394729,0,0,0.394729,-62.0542,-182.292)">
+                                                <path
+                                                    d="M323.515,461.815C271.63,461.815 230.93,477.727 201.452,509.938C171.91,542.148 157.207,592.395 157.207,660.85L157.207,803.034L328.241,803.034L328.241,649.455L245.694,649.455C245.694,611.846 251.835,583.883 263.878,565.575C275.917,547.267 295.773,538.059 323.515,538.059L323.515,461.815ZM558.064,461.815C532.123,461.815 509.023,465.632 488.73,473.452C468.436,481.272 451.002,493.252 436.727,509.574C422.454,525.958 411.513,546.74 403.88,571.999C396.308,597.321 392.485,626.84 392.485,660.85L392.485,803.034L564.126,803.034L564.126,649.455L481.699,649.455C481.699,611.846 487.72,583.883 499.761,565.575C511.8,547.267 531.254,538.059 558.064,538.059L558.064,461.815Z"
+                                                    style="" />
+                                            </g>
+                                        </svg>
+
+                                        <p>Follow your own passion—not your parents’, not your teachers’
+                                            — As
                                             the
                                             quotes say
                                             I followed my passion to be a <a
@@ -189,8 +225,8 @@
                             </p>
                         </div>
                         <div class="row">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-4 align-self-center">
+                            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2"></div>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-4 align-self-center">
                                 <div class="contact_info">
                                     <div class="contact_content">
                                         <h6>PHONE:</h6>
@@ -203,47 +239,49 @@
                                     <div class="contact_content">
                                         <h6>ADDRESS:</h6>
                                         <address>
-                                            Moodbidri, <br>
-                                            India
+                                            <!-- 106 flat number, Chaya Palace Apartment, <br> -->
+                                            <a target="_blank" href="https://goo.gl/maps/RvvkJoxUqrZyshmK8">
+                                                Moodbidri<br>
+                                                India</a>
                                         </address>
                                     </div>
 
                                 </div>
 
                             </div>
-                            <div class="col-md-5 align-self-center">
-                                <div class="contact_form">
+                            <div class="col-6 col-sm-6 col-md-5 col-lg-5 col-xl-5 align-self-center">
+                                <form class="contact_form">
 
                                     <div class="row">
-                                        <div class="col-md-6">
+                                        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                             <div class="input_wrap">
                                                 <input type="text" class="inputText form-control" required />
                                                 <span class="floating-label">Name</span>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                             <div class="input_wrap">
-                                                <input type="text" class="inputText form-control" required />
+                                                <input type="email" class="inputText form-control" required />
                                                 <span class="floating-label">Email</span>
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="input_wrap">
                                                 <input type="text" class="inputText form-control" required />
                                                 <span class="floating-label">Subject</span>
                                             </div>
                                         </div>
-                                        <div class="col-md-12">
+                                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="input_wrap">
                                                 <input type="text" class="inputText form-control" required />
                                                 <span class="floating-label">Message</span>
                                             </div>
                                         </div>
-                                        <div class="col-md-12 text-center">
-                                            <button class="btn_theme btn_fill">Send Message</button>
+                                        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
+                                            <button type="submit" class="btn_theme btn_fill">Send Message</button>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
 
@@ -265,29 +303,26 @@
             <div class="social_icons">
                 <ul class="list-inline list-unstyled">
                     <li>
-                        <a style="color: #007bb5;" target="_blank"
-                            href="https://www.linkedin.com/in/akash-javali-57879375/"><i class="fa fa-linkedin"
-                                aria-hidden="true"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/akash-javali-57879375/"><i
+                                class="fa fa-linkedin" aria-hidden="true"></i></a>
                     </li>
                     <li>
                         <a target="_blank" href="https://github.com/akashjavali"><i class="fa fa-github"
                                 aria-hidden="true"></i></a>
                     </li>
                     <li>
-                        <a style="color: #1877f2;" target="_blank" href="https://www.facebook.com/akash.javali/"><i
+                        <a target="_blank" href="https://www.facebook.com/akash.javali/"><i
                                 class="fa fa-facebook"></i></a>
                     </li>
                     <li>
-                        <a style="color: #c32aa3;" target="_blank" href="https://www.instagram.com/akashjavali/"><i
+                        <a target="_blank" href="https://www.instagram.com/akashjavali/"><i
                                 class="fa fa-instagram"></i></a>
                     </li>
                     <li>
-                        <a style="color: #1da1f2;" target="_blank" href="https://twitter.com/akashjavali"><i
-                                class="fa fa-twitter"></i></a>
+                        <a target="_blank" href="https://twitter.com/akashjavali"><i class="fa fa-twitter"></i></a>
                     </li>
                     <li>
-                        <a style="color: #ff0000;" target="_blank"
-                            href="https://www.youtube.com/channel/UC69Rvp1L5JM6E5mgMfJ-rRA/"><i
+                        <a target="_blank" href="https://www.youtube.com/channel/UC69Rvp1L5JM6E5mgMfJ-rRA/"><i
                                 class="fa fa-youtube"></i></a>
                     </li>
                 </ul>
@@ -347,7 +382,8 @@
 
     <!-- Headline js -->
     <script src="lib/Headline/headline.js"></script>
-    <!-- <script src="lib/Headline/headline.js"></script> -->
+
+    <script src="lib/jquery.typewriter.js"></script>
 
     <!-- custom scripts -->
     <script src="assets/js/main.js"></script>

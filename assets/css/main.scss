@@ -90,10 +90,6 @@ a:hover {
     text-decoration: none;
 }
 
-img {
-    width: 100%;
-    height: auto;
-}
 button {
     background: transparent;
     &:focus {
@@ -301,6 +297,7 @@ button {
                     padding: 10px 0;
                     position: relative;
                     display: inline-block;
+                    transition: all 0.4s;
                     &:after {
                         content: '';
                         display: block;
@@ -315,6 +312,10 @@ button {
 
                     &:hover::after {
                         width: 100%;
+                    }
+                    &:hover {
+                        color: $sc;
+                        font-family: $fm;
                     }
                 }
             }
@@ -372,6 +373,7 @@ button {
         position: relative;
         padding-bottom: 15px;
         line-height: 140%;
+
         &::before {
             content: '';
             height: 1px;
@@ -397,14 +399,21 @@ button {
         }
     }
     &__content {
-        background: url('../../assets/images/quotes.png') no-repeat scroll 10px
-            2px transparent;
-        padding-top: 30px;
+        svg {
+            width: 50px;
+            fill: $layp4;
+            position: relative;
+            top: 15px;
+            left: -20px;
+            @include max(767px) {
+                left: -10px;
+            }
+        }
         p {
             margin-bottom: 10px;
-            a {
-                font-family: $fm;
-            }
+        }
+        a {
+            font-family: $fm;
         }
     }
 
@@ -432,6 +441,15 @@ button {
             position: relative;
             padding-bottom: 15px;
             margin-bottom: 30px;
+            @include max(767px) {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+            @include max(575px) {
+                font-size: 18px;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
             &::before {
                 content: '';
                 height: 1px;
@@ -460,20 +478,60 @@ button {
             width: 80%;
             margin: auto;
             margin-bottom: 30px;
+            @include max(767px) {
+                width: 100%;
+                margin-bottom: 15px;
+                line-height: 1.2;
+            }
+            @include max(575px) {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
         }
     }
 
     .contact_info {
         padding-left: 5%;
         text-align: left;
+        @include max(991px) {
+            padding-left: 15%;
+        }
+        @include max(767px) {
+            padding-left: 0;
+        }
         .contact_content {
             margin-bottom: 20px;
             h6 {
+                // font-size: 18px;
                 color: $pc;
                 font-family: $fb;
+                @include max(767px) {
+                    font-size: 16px;
+                }
+                @include max(575px) {
+                    font-size: 14px;
+                }
+            }
+            a {
+                // font-size: 18px;
+                &:hover {
+                    color: $sc;
+                }
+                @include max(767px) {
+                    font-size: 16px;
+                }
+                @include max(575px) {
+                    font-size: 14px;
+                }
             }
             address {
                 line-height: 1.5;
+                @include max(767px) {
+                    font-size: 16px;
+                }
+                @include max(575px) {
+                    font-size: 14px;
+                }
             }
         }
     }
@@ -490,11 +548,34 @@ button {
                 background: transparent;
                 height: 37px;
                 color: $pc;
+                @include max(767px) {
+                    font-size: 16px;
+                    height: 30px;
+                    margin-bottom: 15px;
+                }
+                @include max(575px) {
+                    font-size: 14px;
+                    height: 28px;
+                    margin-bottom: 10px;
+                }
 
                 &:focus {
                     border-bottom: 1px solid $layp5;
                     box-shadow: none;
                 }
+            }
+            input:-webkit-autofill,
+            input:-webkit-autofill:hover,
+            input:-webkit-autofill:focus,
+            input:-webkit-autofill:active {
+                // -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+                transition: background-color 5000s ease-in-out 0s;
+                background-color: transparent !important;
+                -webkit-text-fill-color: $pc !important;
+            }
+
+            input:-internal-autofill-selected {
+                background: transparent;
             }
 
             input:focus ~ .floating-label,
@@ -512,6 +593,19 @@ button {
                 left: 20px;
                 top: 8px;
                 transition: 0.2s ease all;
+                @include max(767px) {
+                    font-size: 16px;
+                }
+                @include max(575px) {
+                    font-size: 14px;
+                }
+            }
+        }
+        button {
+            @include max(375px) {
+                margin: 10px 0;
+                padding: 8px 15px;
+                font-size: 14px;
             }
         }
     }
@@ -535,6 +629,7 @@ button {
     }
     @include max(320px) {
         left: 85px;
+        bottom: 10px;
     }
 
     .social_icons {
@@ -561,8 +656,12 @@ button {
                     border-radius: 50%;
                     // background: #ffffff;
                     font-size: 20px;
+                    transition: all 0.4s;
                     &:hover {
-                        color: $pc;
+                        color: $sc;
+                    }
+                    @include max(575px) {
+                        font-size: 16px;
                     }
                 }
             }
