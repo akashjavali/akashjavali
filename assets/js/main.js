@@ -85,6 +85,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const themeStylesheet = document.getElementById('theme');
     const storedTheme = localStorage.getItem('theme');
     const imgChange = document.getElementById('imgChange');
+
+    if (themeStylesheet.href.includes('light')) {
+         // if it's dark -> go light
+         themeStylesheet.href = 'assets/css/light-theme.css';
+         imgChange.src = 'assets/images/sunlight.svg';
+       
+    } else {
+        themeStylesheet.href = 'assets/css/dark-theme.css';
+        imgChange.src = 'assets/images/moon.svg';
+       // save the preference to localStorage
+       localStorage.setItem('theme', themeStylesheet.href);
+    }
+    
+    
+    
     if (storedTheme) {
         themeStylesheet.href = storedTheme;
     }
@@ -92,16 +107,18 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle.addEventListener('click', () => {
         // if it's light -> go dark
         if (themeStylesheet.href.includes('light')) {
-            themeStylesheet.href = 'dark-theme.css';
+            themeStylesheet.href = 'assets/css/dark-theme.css';
             imgChange.src = 'assets/images/moon.svg';
         } else {
             // if it's dark -> go light
-            themeStylesheet.href = 'light-theme.css';
+            themeStylesheet.href = 'assets/css/light-theme.css';
             imgChange.src = 'assets/images/sunlight.svg';
         }
         // save the preference to localStorage
         localStorage.setItem('theme', themeStylesheet.href);
     });
+
+   
 });
 
 var themeToggler = document.getElementById('theme-toggle');

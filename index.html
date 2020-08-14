@@ -16,6 +16,7 @@
     <!-- Title  -->
     <title>Akash Javali - Portfolio</title>
 
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/assets/images/favicon.ico" type="image/x-icon">
@@ -40,7 +41,7 @@
     <!-- <link rel="stylesheet" href="lib/Revel/plugin/highlight/monokai.css" id="highlight-theme"> -->
 
     <!-- Theme -->
-    <link id="theme" type="text/css" rel="stylesheet" href="light-theme.css" />
+    <link id="theme" type="text/css" rel="stylesheet" href="assets/css/dark-theme.css" />
     <!-- Theme ends -->
 
 
@@ -250,30 +251,34 @@
 
                             </div>
                             <div class="col-6 col-sm-6 col-md-5 col-lg-5 col-xl-5 align-self-center">
-                                <form class="contact_form">
+                                <form action="POST" data-netlify="true" class="contact_form">
 
                                     <div class="row">
                                         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                             <div class="input_wrap">
-                                                <input type="text" class="inputText form-control" required />
+                                                <input name="name" type="text" class="inputText form-control"
+                                                    required />
                                                 <span class="floating-label">Name</span>
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                                             <div class="input_wrap">
-                                                <input type="email" class="inputText form-control" required />
+                                                <input name="email" type="email" class="inputText form-control"
+                                                    required />
                                                 <span class="floating-label">Email</span>
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="input_wrap">
-                                                <input type="text" class="inputText form-control" required />
+                                                <input name="subject" type="text" class="inputText form-control"
+                                                    required />
                                                 <span class="floating-label">Subject</span>
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                                             <div class="input_wrap">
-                                                <input type="text" class="inputText form-control" required />
+                                                <input name="message" type="text" class="inputText form-control"
+                                                    required />
                                                 <span class="floating-label">Message</span>
                                             </div>
                                         </div>
