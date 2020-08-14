@@ -8,8 +8,12 @@ $(window).on('load', function () {
 //Nav configs
 
 $(document).ready(function () {
-    // new WOW().init();
 
+
+
+    // new WOW().init();
+        //Contact form reset 
+        $('#contact_form')[0].reset();
     
         // HAMBURGER MENU
         $('.hamburger').on('click', function(e) {
