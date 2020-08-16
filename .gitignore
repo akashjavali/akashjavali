@@ -1,7 +1,0 @@
-# Tells Git to ignore any directory named .sass-cache
-.sass-cache*
-
-# Tells Git to ignore files named .css.map
-main.css.map
-
-

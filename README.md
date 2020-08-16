@@ -1,24 +1,14 @@
-# Web
-Resources used for Web Application development
+# Hi, I am Akash Javali 
 
-- [SASS](http://sass-lang.com/) - Preprocessing. *sass --watch css:css*
+I'm a Indian based full-stack web developer creating awesome and responsive apps and website for companies of all sizes around the globe.
 
-> SourceCode path " /... "
+<img src="" alt="banner of akash javali, fullstack developer">
 
-*Plugin used*
+Feel free to send a hi to <akash.javali@hotmail.com> or check my portfolio on [akashjavali.com](https://akashjavali.com).
 
-> 1] *- [Bootstrap 4.5](https://getbootstrap.com/)*
-
-> 2] *- [fontawesome-free-4.7](https://fontawesome.com/v4.7.0/)*
-
-> 3] *- [Swiper-6.0.4](https://idangero.us/swiper/)*
-
-> 4] *- [OwlCarousel2](https://owlcarousel2.github.io/OwlCarousel2/)*
+### Driven by the passion for a better web and a better world!
 
 
--------
+- 👯 I’m looking to collaborate on all sorts of javaScript project
+- 💬 Ask me about front end development
 
-
--------
-
--------
