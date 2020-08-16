@@ -2,9 +2,9 @@
 
 I'm a Indian based full-stack web developer creating awesome and responsive apps and website for companies of all sizes around the globe.
 
-<img src="/Akash Javali.jpg" alt="banner of akash javali, fullstack developer">
+<img src="/Akash Javali.jpg" alt="banner of akash javali, fullstack developer" style="width: 280px">
 
-Feel free to send a hi to <akash.javali@hotmail.com> or check my portfolio on [akashjavali.com](https://akashjavali.com).
+Feel free to send a hi to <akash.javali@hotmail.com> or check my portfolio on [akashjavali](https://akashjavali.netlify.app/).
 
 ### Driven by the passion for a better web and a better world!
 
